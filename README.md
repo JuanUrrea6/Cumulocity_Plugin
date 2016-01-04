@@ -1,6 +1,6 @@
 # Data Solver &copy;
 
-**Data Solver** is a Matlab-based GUI app which allows users to do different kinds of data processing to numerical sets of data uploaded as file inputs. Itś main objective is to simplify the usrś task avoiding the direct use of the Matlab console and coding, providing a user friendly interface to control the process.
+**Data Solver** is a Matlab-based GUI app which allows users to do different kinds of data processing to numerical sets of data uploaded as file inputs. It's main objective is to simplify the user's task avoiding the direct use of the Matlab console and coding, providing a user friendly interface to control the process.
 
 * **Requirements**
 To run **Data Solver** all the files that compose it must be downloaded and executed using Matlab 2014a or newer.
