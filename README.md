@@ -3,7 +3,7 @@ Development of a code capable of not only identifying the relevant frequencies o
 
 ## Using **Analyzer**
 Once the script has been downloaded, run it on the command line giving a *.txt* file as parameter.
-´´´
+```
 python Analyzer.py data.txt
-´´´
+```
 The file *data.txt* must contain the data that will be analyzed organized in a single column, no delimiters of any kind used.
