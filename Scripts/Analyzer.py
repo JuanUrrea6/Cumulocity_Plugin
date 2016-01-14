@@ -2,7 +2,6 @@
 
 #Import the necessary packages.
 import sys
-import matplotlib.pyplot as plt
 import numpy as np
 import time
 from scipy.fftpack import ifft, fft, fftfreq
@@ -34,5 +33,3 @@ theSigma = float(theSigma);
 thePos = func.divide(newArray,numDiv);
 #Array that contains all the bell arrays.
 theBells = [func.createBell(newArray, thePos[i],theSigma)*newArray for i in range(numDiv)];
-plt.plot(theBells[0])
-plt.show()

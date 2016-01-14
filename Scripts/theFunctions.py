@@ -3,6 +3,7 @@
 import numpy as np
 import scipy as sp
 import matplotlib.mlab as mlab
+import matplotlib.pyplot as plt
 
 def divide(data,numDiv):
     length = len(data)
@@ -26,3 +27,8 @@ def find_max(X,Y):
             position = i
     answer = X[position]
     return abs(answer)
+
+def savePlot(xData,yData,destination):
+    figure(figsize=(8,5));
+    plt.plot(xData,yData);
+    savefig(destination);
