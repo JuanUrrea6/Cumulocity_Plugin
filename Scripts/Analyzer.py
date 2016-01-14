@@ -23,9 +23,14 @@ theLength = len(newArray);
 
 #The user must decie the number of partitions in Gaussian bells that will be
 #done to the data array, as well as the sigma for the bell.
-
+print("Gaussian Parameters:");
 numDiv = input("Number of partitions:");
 theSigma = input("Sigma of Gaussian:");
+print("Fourier Analysis Parameters:");
+dt = input("Time Differential (dt)");
+
+#Convert all inputs to acceptable formats.
+dt = float(dt);
 numDiv = int(numDiv);
 theSigma = float(theSigma);
 
@@ -33,3 +38,4 @@ theSigma = float(theSigma);
 thePos = func.divide(newArray,numDiv);
 #Array that contains all the bell arrays.
 theBells = [func.createBell(newArray, thePos[i],theSigma)*newArray for i in range(numDiv)];
+theFouriers = [func.findFourier(theBells[i],dt) for i in range(numDiv)];

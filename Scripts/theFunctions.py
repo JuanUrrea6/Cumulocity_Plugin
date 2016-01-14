@@ -31,4 +31,12 @@ def find_max(X,Y):
 def savePlot(xData,yData,destination):
     figure(figsize=(8,5));
     plt.plot(xData,yData);
+    plt.grid(True);
     savefig(destination);
+
+def findFourier(theData,dt):
+    N = len(theData);
+    fourier_mag = abs(fft(theData));
+    fourier_freq = fftfreq(N,dt);
+    allFourier = array([fourier_mag,fourier_freq]);
+    return allFourier;
