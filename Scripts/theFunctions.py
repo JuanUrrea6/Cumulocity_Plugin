@@ -4,6 +4,7 @@ import numpy as np
 import scipy as sp
 import matplotlib.mlab as mlab
 import matplotlib.pyplot as plt
+from scipy.fftpack import ifft, fft, fftfreq
 
 def divide(data,numDiv):
     length = len(data)
@@ -38,5 +39,5 @@ def findFourier(theData,dt):
     N = len(theData);
     fourier_mag = abs(fft(theData));
     fourier_freq = fftfreq(N,dt);
-    allFourier = array([fourier_mag,fourier_freq]);
+    allFourier = np.array([fourier_mag,fourier_freq]);
     return allFourier;

@@ -3,8 +3,6 @@
 #Import the necessary packages.
 import sys
 import numpy as np
-import time
-from scipy.fftpack import ifft, fft, fftfreq
 import theFunctions as func
 
 #Extract the data from the file input.
@@ -37,5 +35,7 @@ theSigma = float(theSigma);
 #Slidings that must be done with the array and the bells.
 thePos = func.divide(newArray,numDiv);
 #Array that contains all the bell arrays.
-theBells = [func.createBell(newArray, thePos[i],theSigma)*newArray for i in range(numDiv)];
-theFouriers = [func.findFourier(theBells[i],dt) for i in range(numDiv)];
+theBells = np.array([func.createBell(newArray, thePos[i],theSigma)*newArray for i in range(numDiv)]);
+#All the fourier results in magnitude.
+theFouriers = np.array([func.findFourier(theBells[i],dt) for i in range(numDiv)]);
+theMain = np.array([func.find_max(theFouriers[i][1],theFouriers[i][0]) for i in range(numDiv)]);
